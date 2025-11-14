@@ -1,0 +1,17 @@
+{
+  "name": "GAS Development Environment (Automated)",
+  "context": "..",
+  "dockerFile": "../Dockerfile",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "vscode.typescript-language-features"
+      ]
+    }
+  },
+  "remoteUser": "node"
+}

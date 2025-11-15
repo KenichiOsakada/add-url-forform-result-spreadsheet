@@ -5,7 +5,7 @@
 PJルートでコマンド実行
      ``` bash
      docker build -t clasp-node20 .
-     docker run -it --rm -v "$PWD":/app clasp-node20 .
+     docker run -it -v "$PWD":/app --name my-gas-container clasp-node20 bash
      ```
 2. VsCodeでコマンド実行
      1. Ctr + Shift + P でVsCodeのコマンド起動
@@ -22,3 +22,16 @@ PJルートでコマンド実行
      1. 画面遷移が止まるが、通信履歴の中に`http://localhost`と通信している箇所が出てくるのでURLパラメータから`code=`の値を取得
      1.  ログインコマンドが待機状態になっているので、`After authorizing, copy the URL from your browser and paste it here: `に対して`http://localhost:8888/?code=<前のURLパラメータから取得した値>`と入力する
      1. ログイン成功
+4. claspプロジェクト作成
+clasp create --title "TypeScript GAS Project"
+# コンテナ操作
+## コンテナ停止
+普通のコンテナ停止と同じ
+     ``` bash
+          docker stop my-gas-container
+     ```
+## コンテナ起動
+普通のコンテナ起動と同じ
+     ``` bash
+          docker start my-gas-container
+     ```

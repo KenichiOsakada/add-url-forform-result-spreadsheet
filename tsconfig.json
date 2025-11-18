@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",            // 1. 生成されるJavaScriptのバージョン指定（GASはES2017相当をサポート）
+    "module": "commonjs",          // 2. モジュールシステムの指定（claspプロジェクトでは実際には影響しない）
+    "noImplicitAny": false,        // 3. 暗黙的なany型を許容（trueで禁止）
+    "outDir": "dist",              // 4. トランスパイル後の出力先ディレクトリ
+    "rootDir": "src",              // 5. ソースファイルのルートディレクトリ
+    "strict": true,                // 6. 厳格な型チェックを有効化
+    "lib": ["es2017"]              // 7. 使用するJSの標準ライブラリ（ES2017機能を利用）
+  },
+  "include": ["src/**/*.ts"]       // 8. コンパイル対象とするファイルを指定
+}
